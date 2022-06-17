@@ -4,14 +4,14 @@
     </div>
     <div class="row">
         <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-primary shadow h-100 py-3">
+        <div class="col-xl-3 col-md-4 mb-4">
+            <div class="card border-left-primary shadow h-90 py-3 bg-primer">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-3">
-                            <div class="text-s font-weight-bold text-primary text-uppercase mb-1">
+                            <div class="text-s font-weight-bold text-secondary mb-1">
                                 Data Masuk</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_datamasuk() ?></div>
+                            <div class="h5 mb-0 font-weight-bold text-secondary"><?= $this->fungsi->count_datamasuk() ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -21,13 +21,13 @@
             </div>
         </div>
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-danger shadow h-100 py-2">
+            <div class="card border-left-warning shadow h-90 py-3 bg-kuning">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-s font-weight-bold text-danger text-uppercase mb-1">
+                            <div class="text-l font-weight-bold text-secondary mb-1">
                                 Perlu Persetujuan</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_persetujuan() ?></div>
+                            <div class="h5 mb-0 font-weight-bold text-warning"><?= $this->fungsi->count_persetujuan() ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -37,13 +37,13 @@
             </div>
         </div>
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-success shadow h-100 py-2">
+            <div class="card border-left-success shadow h-90 py-3 bg-hijau">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
-                        <div class="col mr-4">
-                            <div class="text-s font-weight-bold text-success text-uppercase mb-1">
-                                Visitor yang di izinkan</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_diizinkan() ?></div>
+                        <div class="col mr-2">
+                            <div class="text-l font-weight-bold text-secondary mb-1">
+                                Visitor Diizinkan</div>
+                            <div class="h5 mb-0 font-weight-bold text-success"><?= $this->fungsi->count_diizinkan() ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-smile fa-2x text-gray-300"></i>
@@ -53,13 +53,13 @@
             </div>
         </div>
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card border-left-danger shadow h-90 py-3 bg-merah">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
-                        <div class="col mr-4">
-                            <div class="text-s font-weight-bold text-warning text-uppercase mb-1">
-                                Visitor yang tidak di izinkan</div>
-                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_ditolak() ?></div>
+                        <div class="col mr-2">
+                            <div class="text-s font-weight-bold  text-secondary mb-1">
+                                Visitor Ditolak</div>
+                            <div class="h5 mb-0 font-weight-bold text-danger"><?= $this->fungsi->count_ditolak() ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-frown fa-2x text-gray-300"></i>
@@ -73,11 +73,11 @@
 
     <!-- Content Row -->
     <div class="row">
-        <div class="col-xl-6 col-lg-7">
+        <div class="col-xl-6 col-lg-7 ">
             <!-- Area Chart -->
-            <div class="card shadow mb-4">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
+            <div class="card shadow mb-4 ">
+                <div class="card-header py-3 bg-navy">
+                    <h6 class="m-0 font-weight-bold text-white">Area Chart</h6>
                 </div>
                 <div class="card-body">
                     <canvas id="myChart"></canvas>
@@ -141,8 +141,8 @@
         </div>
         <div class="col-xl-6 col-lg-7">
             <div class="card shadow mb-8">
-                <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Pie Chart</h6>
+                <div class="card-header py-3 bg-navy">
+                    <h6 class="m-0 font-weight-bold text-white">Pie Chart</h6>
                 </div>
                 <div class="card-body">
                     <canvas id="iChart"></canvas>
@@ -181,11 +181,11 @@
         <div class="row">
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-primary shadow h-100 py-3">
+                <div class="card border-left-primary shadow h-90 bg-primer py-3">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-3">
-                                <div class="text-s font-weight-bold text-primary text-uppercase mb-1">
+                                <div class="text-s font-weight-bold text-secondary mb-1">
                                     Data Masuk</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_datamasuk_kasek() ?></div>
                             </div>
@@ -197,11 +197,11 @@
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card border-left-warning shadow h-90 py-3 bg-kuning">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-s font-weight-bold text-danger text-uppercase mb-1">
+                                <div class="text-s font-weight-bold text-warning  mb-1">
                                     Perlu Peretujuan </div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_persetujuan_kasek() ?></div>
                             </div>
@@ -213,12 +213,12 @@
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-success shadow h-100 py-2">
+                <div class="card border-left-success shadow h-90 py-3 bg-hijau">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-4">
-                                <div class="text-s font-weight-bold text-success text-uppercase mb-1">
-                                    Visitor yang di izinkan</div>
+                                <div class="text-l font-weight-bold text-success mb-1">
+                                    Visitor Diizinkan</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_diizinkan_kasek() ?></div>
                             </div>
                             <div class="col-auto">
@@ -229,12 +229,12 @@
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card border-left-danger shadow h-100 py-2 bg-merah">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-4">
-                                <div class="text-s font-weight-bold text-warning text-uppercase mb-1">
-                                    Visitor yang tidak di izinkan</div>
+                                <div class="text-s font-weight-bold text-danger  mb-1">
+                                    Visitor Ditolak</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_ditolak_kasek() ?></div>
                             </div>
                             <div class="col-auto">
@@ -252,8 +252,8 @@
             <div class="col-xl-6 col-lg-7">
                 <!-- Area Chart -->
                 <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
+                    <div class="card-header py-3 bg-navy">
+                        <h6 class="m-0 font-weight-bold text-white">Area Chart</h6>
                     </div>
                     <div class="card-body">
                         <canvas id="myChart"></canvas>
@@ -315,8 +315,8 @@
             </div>
             <div class="col-xl-6 col-lg-7">
                 <div class="card shadow mb-8">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Pie Chart</h6>
+                    <div class="card-header py-3 bg-navy">
+                        <h6 class="m-0 font-weight-bold text-white">Pie Chart</h6>
                     </div>
                     <div class="card-body">
                         <canvas id="Chart"></canvas>
@@ -429,8 +429,8 @@
                         <div class="col-xl-6 col-lg-7">
                             <!-- Area Chart -->
                             <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
+                                <div class="card-header py-3 bg-navy">
+                                    <h6 class="m-0 font-weight-bold text-white">Area Chart</h6>
                                 </div>
                                 <div class="card-body">
                                     <canvas id="myChart"></canvas>
@@ -494,8 +494,8 @@
                         </div>
                         <div class="col-xl-6 col-lg-7">
                             <div class="card shadow mb-8">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Pie Chart</h6>
+                                <div class="card-header py-3 bg-navy">
+                                    <h6 class="m-0 font-weight-bold text-white">Pie Chart</h6>
                                 </div>
                                 <div class="card-body">
                                     <canvas id="iChart"></canvas>

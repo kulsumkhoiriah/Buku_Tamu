@@ -8,7 +8,7 @@
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-        <div class="card-body">
+        <div class="card-body bg-gradient-primary rounded">
             <div class="table-responsive">
                 <?php $this->view('massage') ?>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -53,7 +53,7 @@
     </div>
     <div class="modal fade" id="hapus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
+            <div class="modal-content  text-gray-800">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Ready to Delete?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
@@ -71,17 +71,15 @@
     </div>
 <?php } else if ($this->session->userdata('level') != 1) { ?>
     <!-- Main content -->
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-primary">Pengunjung Data Center Peruri</h1>
+    <div class="d-sm-flex justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-primary">Pengunjung Data Center Peruri</h1>
         <a class="d-none d-sm-inline-block btn btn-outline-primary shadow-sm" data-toggle="modal" data-target="#cetakpdf">
             <i class="fa fa-print"></i> Cetak PDF
         </a>
     </div>
-
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-
-        <div class="card-body">
+        <div class="card-body bg-gradient-primary rounded">
             <div class="table-responsive">
                 <?php $this->view('massage') ?>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -125,35 +123,35 @@
             </div>
         </div>
     </div>
-<?php } ?>
-<div class="modal fade" id="hapusModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Delete?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"></span>
-                </button>
-            </div>
-            <div class="modal-body">Select "Delete" below if you are ready to Delete.</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a href="<?= site_url('Data_masuk/del/' . $dk->id) ?>" class="btn btn-primary">Delete</a>
+
+    <div class="modal fade" id="hapusModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content text-gray-800">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Delete?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Delete" below if you are ready to Delete.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a href="<?= site_url('Data_masuk/del/' . $dk->id) ?>" class="btn btn-primary">Delete</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div>
-
+<?php } ?>
 <!-- Modal Ubah -->
 <div id="cetakpdf" class="modal fade" role="dialog">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content text-gray-800">
             <div class="modal-header">
                 <h4 class="modal-title">Print Data Tamu</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
 
             </div>
+
             <div class="modal-body">
                 <form action="<?= site_url('Data_masuk/pdf') ?>" method="post" target="_blank">
                     <table>

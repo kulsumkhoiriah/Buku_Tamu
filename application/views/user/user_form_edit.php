@@ -2,13 +2,13 @@
 
 <div class="col d-flex justify-content-center">
     <div class="card shadow card-center mb-5" style="width: 80%;">
-        <div class="card-header py-3">
+        <div class="card-header py-3 bg-navy">
             <center>
-                <h4 class="m-0 font-weight-bold text-primary">Edit User</h4>
+                <h4 class="m-0 font-weight-bold text-white">Edit User</h4>
             </center>
         </div>
 
-        <div class="card-body">
+        <div class="card-body bg-gradient-primary">
             <div class="row">
                 <div class="col">
                     <form action="" method="post">
@@ -47,7 +47,7 @@
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-success btn-flat"><i class="fa fa-paper-plane"></i> Save</button>
-                            <button type="reset" class="btn  btn-flat">Reset</button>
+                            <button type="reset" class="btn  btn-danger">Reset</button>
                         </div>
                     </form>
 

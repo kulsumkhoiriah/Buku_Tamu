@@ -5,10 +5,10 @@
 </div>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
-    <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Data Users</h6>
+    <div class="card-header py-3 bg-navy">
+        <h6 class="m-0 font-weight-bold text-white">Data Users</h6>
     </div>
-    <div class="card-body">
+    <div class="card-body  bg-gradient-primary">
         <div class="table-responsive">
             <?php $this->view('massage') ?>
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

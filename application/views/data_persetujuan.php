@@ -9,7 +9,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
 
-        <div class="card-body">
+        <div class="card-body bg-gradient-primary rounded">
             <div class="table-responsive">
                 <?php $this->view('massage') ?>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -61,15 +61,11 @@
     <section class="content-header">
     </section>
     <!-- Main content -->
-    <h1 class="h3 mb-2 text-gray-800">
-        Data Penerimaan Buku Tamu</h1>
-
+    <h1 class="h3 mb-0 text-gray-800">Data Persetujuan</h1>
+    <br>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Data Tamu Baru</h6>
-        </div>
-        <div class="card-body">
+        <div class="card-body bg-gradient-primary rounded">
             <div class="table-responsive">
                 <?php $this->view('massage') ?>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -122,7 +118,7 @@
     </div>
 <?php } ?>
 <div id="alasan" class="modal fade" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog text-gray-800">
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title">Note</h4>
@@ -163,7 +159,7 @@
 </div>
 <div id="alasan_kasek" class="modal fade" role="dialog">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content text-gray-800">
             <div class="modal-header">
                 <h4 class="modal-title">Note</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>

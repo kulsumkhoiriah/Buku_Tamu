@@ -32,79 +32,81 @@
                         <h3 class="mt-3" style="font-family: 'EB Garamond', serif;"> Form Kunjungan </h3>
                         <h5 style="font-family: 'EB Garamond', serif;">Data Center Peruri</h5>
                     </center>
+                    <hr>
                     <br>
+
                 </div>
                 <?php $this->view('massage') ?>
-                <hr>
+
                 <div class="card-body">
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Tanggal</label>
                         <div class="col-sm-7">
-                            <input type="date" class="form-control" placeholder="Date" name="tanggal">
+                            <input type="date" class="form_rounded" placeholder="Date" name="tanggal">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Nama Visitor</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" placeholder="Masukan Nama Visitor" name="nama_visitor">
+                            <input type="text" class="form_rounded" placeholder="Masukan Nama Visitor" name="nama_visitor">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Nomor Telepon</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" placeholder="Masukan Nomor Telepon" name="nomor_telepon">
+                            <input type="text" class="form_rounded" placeholder="Masukan Nomor Telepon" name="nomor_telepon">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Email</label>
                         <div class="col-sm-7">
-                            <input type="email" class="form-control" placeholder="Masukan Email" name="email">
+                            <input type="email" class="form_rounded" placeholder="Masukan Email" name="email">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Perusahaan / Unit Kerja</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" placeholder="Masukan Perusahaan / Unit Kerja" name="unit_kerja">
+                            <input type="text" class="form_rounded" placeholder="Masukan Perusahaan / Unit Kerja" name="unit_kerja">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Pendamping</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" placeholder="Masukan Nama Pendamping" name="pendamping">
+                            <input type="text" class="form_rounded" placeholder="Masukan Nama Pendamping" name="pendamping">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Tujuan Kunjungan</label>
                         <div class="col-sm-7">
-                            <textarea style="width: 100%;" name="tujuan"></textarea>
+                            <textarea name="tujuan"></textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Keterangan</label>
                         <div class="col-sm-7">
-                            <textarea style="width: 100%;" name="keterangan"></textarea>
+                            <textarea name="keterangan"></textarea>
                         </div>
                     </div>
                     <div class=" form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Time in</label>
                         <div class="col-sm-3">
-                            <input type="time" class="form-control" name="time_in">
+                            <input type="time" class="form_rounded" name="time_in">
                         </div>
                     </div>
                     <div class=" form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Time out (Estimasi)</label>
                         <div class="col-sm-3">
-                            <input type="time" class="form-control" name="time_out">
+                            <input type="time" class="form_rounded" name="time_out">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -119,32 +121,32 @@
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Kartu Tanda Pengenal</label>
                         <div class="col-sm-7">
-                            <input type="file" class="form-control" name="nik">
+                            <input type="file" class="form_rounded" name="nik">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Foto</label>
                         <div class="col-sm-7">
-                        <div id="live_camera"></div>
-                                    <hr />
-                                    <input type=button value="Take Snapshot" onClick="capture_web_snapshot()">
-                                    <input type="hidden" name="foto" class="foto-tag" ><br>
-                            <a class="btn btn-outline-danger" data-toggle="modal" data-target="#foto">Lihat  Foto</a>
-                            
+                            <div id="live_camera"></div>
+                            <hr />
+                            <input type=button class="btn btn-outline-primary " value="Take Snapshot" onClick="capture_web_snapshot()"> <a class="btn btn-outline-danger" data-toggle="modal" data-target="#foto">Lihat Foto</a>
+
+                            <input type="hidden" name="foto" class="foto-tag"><br>
+
                         </div>
                     </div>
-                        <div class="form-group row">
-                            <div class="col-sm-1">
-                            </div>
-                            <div class="col-sm-5">
-                                <input type="submit" class="btn btn-primary" name="save" value="Save Data" />
-                                <button type="reset" class="btn btn-secondary"> Cancel </button>
-                            </div>
+                    <div class="form-group row">
+                        <div class="col-sm-1">
+                        </div>
+                        <div class="col-sm-5">
+                            <input type="submit" class="btn btn-primary" name="save" value="Save Data" />
+                            <button type="reset" class="btn btn-secondary"> Cancel </button>
                         </div>
                     </div>
-                </div> <?php echo form_close(); ?>
-            </div>
+                </div>
+            </div> <?php echo form_close(); ?>
+        </div>
 </body>
 
 <div id="foto" class="modal fade" role="dialog">
@@ -157,16 +159,17 @@
             </div>
             <div class="modal-body">
 
-                    <table>
-                        <tr>
-                            
-                            <td>
+                <table>
+                    <tr>
+
+                        <td>
                             <div id="preview">
 
                             </div>
-                            </td>
-                        </tr>
-</table>            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
 

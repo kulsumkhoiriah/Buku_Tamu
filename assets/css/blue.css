@@ -68,11 +68,11 @@ section {
 
 body {
     margin: 0;
-    font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: cursive;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #858796;
+    color: #e5e9f5;
     text-align: left;
     background-color: #fff
 }
@@ -264,7 +264,7 @@ textarea {
 
 button,
 input {
-    overflow: visible
+    overflow: visible;
 }
 
 button,
@@ -506,15 +506,28 @@ mark {
 }
 
 .img-fluid {
-    max-width: 100%;
-    height: auto
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dddfeb;
+    border-radius: .35rem;
+    height: 100px;
+    width: 200px;
 }
 
 .img-thumbnail {
     padding: .25rem;
     background-color: #fff;
     border: 1px solid #dddfeb;
-    border-radius: .35rem;
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto
+}
+
+.img-detail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dddfeb;
+    border-radius: 50%;
     max-width: 100%;
     height: auto
 }
@@ -1773,10 +1786,11 @@ pre code {
     }
 }
 
-.table {
+.data .table {
     width: 100%;
     margin-bottom: 1rem;
-    color: #858796
+    color: #858796;
+    background-color: #040f31;
 }
 
 .table td,
@@ -2132,8 +2146,11 @@ pre code {
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #d1d3e2;
-    border-radius: .35rem;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.form-rounded {
+    border-radius: 1rem;
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -7036,8 +7053,12 @@ a.close.disabled {
     background-color: #dfc8c8 !important;
 }
 
+.bg-navy {
+    background-color: #040f31 !important;
+}
+
 .bg-kuning {
-    background-color: #eee3c8 !important;
+    background-color: #f4dc9f !important;
 }
 
 a.bg-primary:focus,
@@ -7114,7 +7135,7 @@ button.bg-light:hover {
 }
 
 .bg-dark {
-    background-color: #d5cfe6 !important;
+    background-color: #cfd6e6 !important;
 }
 
 a.bg-dark:focus,
@@ -7125,7 +7146,7 @@ button.bg-dark:hover {
 }
 
 .bg-white {
-    background-color: #b7b9cc !important
+    background-color: #040f31 !important
 }
 
 .bg-transparent {
@@ -10772,8 +10793,12 @@ button.bg-dark:hover {
     color: #fff !important
 }
 
+.rounded {
+    border-radius: 10erm;
+}
+
 .text-primary {
-    color: #4e73df !important
+    color: #040f31 !important
 }
 
 a.text-primary:focus,
@@ -10782,7 +10807,7 @@ a.text-primary:hover {
 }
 
 .text-secondary {
-    color: #858796 !important
+    color: #040f31 !important
 }
 
 a.text-secondary:focus,
@@ -10836,7 +10861,7 @@ a.text-light:hover {
 }
 
 .text-dark {
-    color: #5a5c69 !important
+    color: black !important
 }
 
 a.text-dark:focus,
@@ -11116,7 +11141,7 @@ a:focus {
 
 .bg-gradient-primary {
     background-color: #4e73df;
-    background-image: linear-gradient(180deg, #303b5a 10%, #224abe 100%);
+    background-image: linear-gradient(180deg, #040f31 10%, #224abe 100%);
     background-size: cover
 }
 
@@ -11239,7 +11264,7 @@ a:focus {
 }
 
 .text-gray-800 {
-    color: #5a5c69 !important
+    color: #040f31 !important
 }
 
 .text-gray-900 {
