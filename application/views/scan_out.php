@@ -43,7 +43,7 @@
                             <tr>
                                 <td>Time Out</td>
                                 <td>
-                                    <input type="teks" class="form-control form-rounded " name="time_out" value="<?php
+                                    <input type="teks" class="form-control form-rounded " name="time_out_aktual" value="<?php
                                                                                                                     date_default_timezone_set('Asia/Jakarta'); // Zona Waktu indonesia
                                                                                                                     echo date('h:i:s a'); ?>" readonly>
                                 </td>

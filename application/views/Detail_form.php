@@ -52,7 +52,7 @@
                                             <tr>
                                                 <td></td>
                                                 <td></td>
-                                                <td align="right"><button class="btn btn-outline-primary" type="submit"><i class="fa fa-search"> Cari</i></button></td>
+                                                <td align="right"><button class="btn btn-outline-danger" type="submit"><i class="fa fa-search"> Cari</i></button></td>
                                             </tr>
                                             </center>
                                         </table>
@@ -62,126 +62,138 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+        <?php } else if (!empty($keyword)) { ?>
+            <?php foreach ($data as $detail) { ?>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8  bg-gradient-primary text-white offset-md-2 d-flex justify-content-center rounded-lg  ">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card-body text-white">
+                                        <table class="table table-borderless text-white ">
+                                            <tr>
 
-                <?php } else if (!empty($keyword)) { ?>
-                    <?php foreach ($data as $detail) { ?>
-                        <div class="container-fluid ">
-                            <div class=" row  mr-8">
-                                <div class="col-md-8  bg-gradient-primary text-white offset-md-2 rounded-lg  ">
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="card-body text-white">
-                                                <table class="table table-borderless text-white ">
-                                                    <tr>
+                                                <td align="center" colspan="3">
+                                                    <h2><a class="text-white"><i><?php echo $detail->nama_visitor ?></i></a></h2>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center" colspan="3"><img class="img-thumbnail" src="<?php echo $detail->foto ?>" width="150px" height="200px" /></td>
+                                            </tr>
+                                            <tr rowspan="3">
+                                                <td><br></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Nomer Telepon</b></td>
+                                                <td>:</td>
+                                                <td><input type="text" value="<?php echo $detail->nomor_telepon ?>" class="form_rounded" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Email</b></td>
+                                                <td>:</td>
+                                                <td><input type="text" value="<?php echo $detail->email ?>" class="form_rounded" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Unit Kerja</b></td>
+                                                <td>:</td>
+                                                <td><input type="text" value="<?php echo $detail->unit_kerja ?>" class="form_rounded" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Tanggal</b></td>
+                                                <td>:</td>
+                                                <td><input type="text" value="<?php echo $detail->tanggal ?>" class="form_rounded" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Pendamping</b></td>
+                                                <td>:</td>
+                                                <td><input type="text" value="<?php echo $detail->pendamping ?>" class="form_rounded" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Tujuan</b></td>
+                                                <td>:</td>
+                                                <td><input type="text" value="<?php echo $detail->tujuan ?>" class="form_rounded" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Keterangan</b></td>
+                                                <td>:</td>
+                                                <td><input type="text" value="<?php echo $detail->keterangan ?>" class="form_rounded" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Time in (Estmasi)</b></td>
+                                                <td>:</td>
+                                                <td><input type="text" value="<?php echo $detail->time_in ?>" class="form_rounded" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Time Out (Estimasi)</b></td>
+                                                <td>:</td>
+                                                <td><input type="text" value="<?php echo $detail->time_out ?>" class="form_rounded" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Time in (Aktual)</b></td>
+                                                <td>:</td>
+                                                <td><input type="text" value="<?php echo $detail->time_in_aktual ?>" class="form_rounded" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Time Out (Aktual)</b></td>
+                                                <td>:</td>
+                                                <td><input type="text" value="<?php echo $detail->time_out_aktual ?>" class="form_rounded" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Tanda Tangan</td>
+                                                <td>:</td>
+                                                <td><img src="<?php echo $detail->signed ?>" class=" img-thumbnail" /></td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>QR Code</td>
+                                                <td>:</td>
+                                                <td><img src="<?php
+                                                                $kode = "$detail->id";
+                                                                $folder = "././assets/code/";
+                                                                require_once('assets/qrcode/qrlib.php');
+                                                                QRcode::png("$kode","$folder" . $detail->id . ".png", "l", 4.4);
+                                                                ?>">
+                                                    <img src="<?= base_url() ?>assets/code/<?= $detail->id ?>.png" alt=""></img>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Kartu Tanda Pengenal</b></td>
+                                                <td>:</td>
+                                                <td><img src="<?php echo base_url(); ?>assets/tanda_pengenal/<?php echo $detail->nik; ?>" class="img-thumbnail" width="200" height="100"></img></td>
 
-                                                        <td align="center" colspan="3">
-                                                            <h2><a class="text-white"><i><?php echo $detail->nama_visitor ?></i></a></h2>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td align="center" colspan="3"><img class="img-thumbnail" src="<?php echo $detail->foto ?>" width="150px" height="200px" /></td>
-                                                    </tr>
-                                                    <tr rowspan="3">
-                                                        <td><br></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><b>Nomer Telepon</b></td>
-                                                        <td>:</td>
-                                                        <td><input type="text" value="<?php echo $detail->nomor_telepon ?>" class="form_rounded" readonly></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><b>Email</b></td>
-                                                        <td>:</td>
-                                                        <td><input type="text" value="<?php echo $detail->email ?>" class="form_rounded" readonly></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><b>Unit Kerja</b></td>
-                                                        <td>:</td>
-                                                        <td><input type="text" value="<?php echo $detail->unit_kerja ?>" class="form_rounded" readonly></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><b>Tanggal</b></td>
-                                                        <td>:</td>
-                                                        <td><input type="text" value="<?php echo $detail->tanggal ?>" class="form_rounded" readonly></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><b>Pendamping</b></td>
-                                                        <td>:</td>
-                                                        <td><input type="text" value="<?php echo $detail->pendamping ?>" class="form_rounded" readonly></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><b>Tujuan</b></td>
-                                                        <td>:</td>
-                                                        <td><input type="text" value="<?php echo $detail->tujuan ?>" class="form_rounded" readonly></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><b>Keterangan</b></td>
-                                                        <td>:</td>
-                                                        <td><input type="text" value="<?php echo $detail->keterangan ?>" class="form_rounded" readonly></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><b>Time in</b></td>
-                                                        <td>:</td>
-                                                        <td><input type="text" value="<?php echo $detail->time_in ?>" class="form_rounded" readonly></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><b>Time Out</b></td>
-                                                        <td>:</td>
-                                                        <td><input type="text" value="<?php echo $detail->time_out ?>" class="form_rounded" readonly></td>
-                                                    <tr>
-                                                        <td><b>Tanda Tangan</td>
-                                                        <td>:</td>
-                                                        <td><img src="<?php echo $detail->signed ?>" class=" img-thumbnail" /></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><b>QR Code</td>
-                                                        <td>:</td>
-                                                        <td><img src="<?php
-                                                                        $kode = "$detail->id";
-                                                                        require_once('assets/qrcode/qrlib.php');
-                                                                        QRcode::png("$kode", "kode" . $detail->id . ".png", "l", 4.4);
-                                                                        ?>">
-                                                            <img src="<?= base_url() ?>kode<?= $detail->id ?>.png" alt=""></img>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td><b>Kartu Tanda Pengenal</b></td>
-                                                        <td>:</td>
-                                                        <td><img src="<?php echo base_url(); ?>assets/tanda_pengenal/<?php echo $detail->nik; ?>" class="img-thumbnail" width="200" height="100"></img></td>
-
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Status</td>
-                                                        <td>:</td>
-                                                        <td>
-                                                            <?php
-                                                            if ($detail->status_kasek  == 1 && $detail->status  == 0) {
-                                                                echo '<mark style="background-color:Orange;">Menunggu Persetujuan Kadep</mark>';
-                                                            } else if ($detail->status_kasek  == 2) {
-                                                                echo '<mark style="background-color:red"> Tidak Disetujui</mark>   Note : ';
-                                                                echo $detail->alasan;
-                                                            } elseif ($detail->status_kasek  == 1 && $detail->status  == 1) {
-                                                                echo '<mark style="background-color:green;">Setuju</mark>';
-                                                            } elseif ($detail->status_kasek  == 1 && $detail->status  == 2) {
-                                                                echo '<mark style="background-color:red;">Tidak Disetujui</mark>   Note : ';
-                                                                echo $detail->alasan;
-                                                            } else {
-                                                                echo '<mark style="background-color:yellow;">Menunggu Persetujuan Kasek</mark>';
-                                                            }
-                                                            ?>
-                                                    </tr>
-                                                </table>
-                                            </div>
-
-                                        <?php } ?>
-                                    <?php } ?>
-                                    </table>
-
-
-                                    </center>
-                                        </div>
+                                            </tr>
+                                            <tr>
+                                                <td>Status</td>
+                                                <td>:</td>
+                                                <td>
+                                                    <?php
+                                                    if ($detail->status_kasek  == 1 && $detail->status  == 0) {
+                                                        echo '<mark style="background-color:Orange;">Menunggu Persetujuan Kadep</mark>';
+                                                    } else if ($detail->status_kasek  == 2) {
+                                                        echo '<mark style="background-color:red"> Tidak Disetujui</mark>   Note : ';
+                                                        echo $detail->alasan;
+                                                    } elseif ($detail->status_kasek  == 1 && $detail->status  == 1) {
+                                                        echo '<mark style="background-color:green;">Setuju</mark>';
+                                                    } elseif ($detail->status_kasek  == 1 && $detail->status  == 2) {
+                                                        echo '<mark style="background-color:red;">Tidak Disetujui</mark>   Note : ';
+                                                        echo $detail->alasan;
+                                                    } else {
+                                                        echo '<mark style="background-color:yellow;">Menunggu Persetujuan Kasek</mark>';
+                                                    }
+                                                    ?>
+                                            </tr>
+                                        </table>
                                     </div>
+                                <?php } ?>
+                            <?php } ?>
+                            </table>
+                            </center>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 </body>
 </form>
 

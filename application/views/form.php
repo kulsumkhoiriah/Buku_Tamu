@@ -57,7 +57,7 @@
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Nomor Telepon</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form_rounded" placeholder="Masukan Nomor Telepon" name="nomor_telepon">
+                        <input input type="text" id="cc" class="form_rounded"  name="nomor_telepon" placeholder="Masukan Nomor Telepon">
                         </div>
                     </div>
                     <div class="form-group row">
@@ -203,5 +203,12 @@
         });
     }
 </script>
-
+<script type="text/javascript">
+	$(document).ready(function(){
+	    // Format nomor HP.
+        $('#cc').inputmask("9999 9999 9999")
+	})
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js'></script>
 </html>

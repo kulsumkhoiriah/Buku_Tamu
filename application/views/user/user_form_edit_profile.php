@@ -8,7 +8,7 @@
             </center>
         </div>
 
-        <div class="card-body bg-navy">
+        <div class="card-body bg-gradient-primary">
             <div class="row">
                 <div class="col">
                     <form action="" method="post">

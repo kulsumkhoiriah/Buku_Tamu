@@ -17,10 +17,10 @@ class Scan extends CI_Controller
     function ubah()
     {
         $id = $this->input->post('id');
-        $time_in = $this->input->post('time_in');
+        $time_in_aktual = $this->input->post('time_in_aktual');
         $data = array(
             'id' => $id,
-            'time_in' => $time_in,
+            'time_in_aktual' => $time_in_aktual,
         );
         $where = array(
             'id' => $id
@@ -47,10 +47,10 @@ class Scan extends CI_Controller
     function ubah_out()
     {
         $id = $this->input->post('id');
-        $time_out = $this->input->post('time_out');
+        $time_out_aktual = $this->input->post('time_out_aktual');
         $data = array(
             'id' => $id,
-            'time_out' => $time_out,
+            'time_out_aktual' => $time_out_aktual,
         );
         $where = array(
             'id' => $id

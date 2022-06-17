@@ -43,7 +43,7 @@
                             <tr>
                                 <td>Time In</td>
                                 <td>
-                                    <input type="teks" class="form-control" name="time_in" value="<?php
+                                    <input type="teks" class="form-control" name="time_in_aktual" value="<?php
                                                                                                     date_default_timezone_set('Asia/Jakarta'); // Zona Waktu indonesia
                                                                                                     echo date('h:i:s a'); ?>" readonly>
                                 </td>
