@@ -358,13 +358,29 @@
                     <div class="row">
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card border-left-primary shadow h-90 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-s font-weight-bold text-warning text-uppercase mb-1">
-                                                Perlu Peretujuan Kepala Seksi</div>
+                                            <div class="text-s font-weight-bold text-primary  mb-1">
+                                                Perlu Peretujuan Kasek</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_persetujuan_kasek() ?></div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-user fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-90 py-2">
+                                <div class="card-body ">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-s font-weight-bold text-primary  mb-1">
+                                                Perlu Persetujuan Kadep</div>
+                                            <div class="h5 mb-0 font-weight-bold text-warning"><?= $this->fungsi->count_persetujuan() ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -377,25 +393,9 @@
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-s font-weight-bold text-success text-uppercase mb-1">
-                                                Perlu Persetujuan Kepala Departemen</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_persetujuan() ?></div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-user fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
                                         <div class="col mr-4">
-                                            <div class="text-s font-weight-bold text-primary text-uppercase mb-1">
-                                                Visitor yang di izinkan</div>
+                                            <div class="text-s font-weight-bold text-success  mb-1">
+                                                Visitor di izinkan</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_diizinkan() ?></div>
                                         </div>
                                         <div class="col-auto">
@@ -410,8 +410,8 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-4">
-                                            <div class="text-s font-weight-bold text-danger text-uppercase mb-1">
-                                                Visitor yang tidak di izinkan</div>
+                                            <div class="text-s font-weight-bold text-danger  mb-1">
+                                                Visitor Ditolak</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_ditolak() ?></div>
                                         </div>
                                         <div class="col-auto">

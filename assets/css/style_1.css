@@ -17,12 +17,18 @@
 .img {
     background-repeat: no-repeat, repeat;
     background-color: #cccccc;
+    height: max-content;
 }
 
 #preview {
     padding: 30px;
     border: 0px solid;
     background: #ffffff;
+}
+
+.text-black {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
 }
 
 .form_rounded {
@@ -37,7 +43,7 @@
     border-radius: 1rem;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid #d1d3e2;
+    border: 1px solid #00020f;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 
@@ -53,7 +59,7 @@
     border-radius: 1rem;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid #d1d3e2;
+    border: 1px solid #01030f;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 
@@ -69,14 +75,14 @@ textarea {
     border-radius: 1rem;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid #d1d3e2;
+    border: 1px solid #00020c;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
 
 .img-fluid {
     padding: .25rem;
-    background-color: #fff;
-    border: 1px solid #dddfeb;
+    background-color: rgb(9, 14, 51);
+    border: 1px solid #01030e;
     border-radius: .35rem;
     height: 100px;
     width: 200px;

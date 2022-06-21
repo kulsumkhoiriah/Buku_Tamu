@@ -14,40 +14,40 @@
                     <table class="table table-borderless ">
                         <tr>
 
-                            <td colspan="3" align="center">
+                            <td align="center">
                                 <h2><a class="text-gray-800"><i><?php echo $detail->nama_visitor ?></i></a></h2>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="3" align="center"><img class="img-thumbnail" src="<?php echo $detail->foto ?>" width="150px" height="200px" /></td>
+                            <td align="center"><img class="img-thumbnail" src="<?php echo $detail->foto ?>" width="150px" height="200px" /></td>
                         </tr>
                         <tr rowspan="3">
-                            <td colspan="3"><br></td>
+                            <td><br></td>
                         </tr>
                         <tr>
-                            <td colspan="3"><b>Nomer Telepon</b></td>
+                            <td><b>Nomer Telepon</b></td>
 
                         </tr>
                         <tr>
-                            <td colspan="3"><input type="text" value="<?php echo $detail->nomor_telepon ?>" class="form-control form-rounded" readonly></td>
+                            <td><input type="text" value="<?php echo $detail->nomor_telepon ?>" class="form-control form-rounded" readonly></td>
                         </tr>
                         <tr>
-                            <td colspan="3"><b>Email</b></td>
+                            <td><b>Email</b></td>
                         </tr>
                         <tr>
-                            <td colspan="3"><input type="text" value="<?php echo $detail->email ?>" class="form-control form-rounded" readonly></td>
+                            <td><input type="text" value="<?php echo $detail->email ?>" class="form-control form-rounded" readonly></td>
                         </tr>
                         <tr>
-                            <td colspan="3"><b>Unit Kerja</b></td>
+                            <td><b>Unit Kerja</b></td>
                         </tr>
                         <tr>
-                            <td colspan="3"><input type="text" value="<?php echo $detail->unit_kerja ?>" class="form-control form-rounded" readonly></td>
+                            <td><input type="text" value="<?php echo $detail->unit_kerja ?>" class="form-control form-rounded" readonly></td>
                         </tr>
                         <tr>
                             <td><b>Kartu Tanda Pengenal</b></td>
-                            <td>:</td>
+                        </tr>
+                        <tr>
                             <td><img src="<?php echo base_url(); ?>assets/tanda_pengenal/<?php echo $detail->nik; ?>" class="img-fluid"></img></td>
-
                         </tr>
                     </table>
                 </div>
@@ -88,9 +88,9 @@
                             <td><input type="text" value="<?php echo $detail->time_in ?>" class="form-control form-rounded" readonly></td>
                         </tr>
                         <tr>
-                        <td><b>Time Out (Estimasi)</b></td>
-                        <td>:</td>
-                        <td colspan="3"><input type="text" value="<?php echo $detail->time_out ?>" class="form-control form-rounded" readonly></td>
+                            <td><b>Time Out (Estimasi)</b></td>
+                            <td>:</td>
+                            <td colspan="3"><input type="text" value="<?php echo $detail->time_out ?>" class="form-control form-rounded" readonly></td>
                         </tr>
                         <tr>
                             <td><b>Time in (Aktual)</b></td>
@@ -98,9 +98,9 @@
                             <td><input type="text" value="<?php echo $detail->time_in_aktual ?>" class="form-control form-rounded" readonly></td>
                         </tr>
                         <tr>
-                        <td><b>Time Out (Aktual)</b></td>
-                        <td>:</td>
-                        <td colspan="3"><input type="text" value="<?php echo $detail->time_out_aktual ?>" class="form-control form-rounded" readonly></td>
+                            <td><b>Time Out (Aktual)</b></td>
+                            <td>:</td>
+                            <td colspan="3"><input type="text" value="<?php echo $detail->time_out_aktual ?>" class="form-control form-rounded" readonly></td>
                         </tr>
                         <tr>
                             <td><b>Tanda Tangan</td>
@@ -167,9 +167,9 @@
                                     </tr>
                                     <tr>
                                         <td><b>Kartu Tanda Pengenal</b></td>
-                                        <td>:</td>
+                                    </tr>
+                                    <tr>
                                         <td><img src="<?php echo base_url(); ?>assets/tanda_pengenal/<?php echo $detail->nik; ?>" class="img-fluid"></img></td>
-
                                     </tr>
                                 </table>
                             </div>
@@ -205,25 +205,25 @@
                                         <td colspan="3"><input type="text" value="<?php echo $detail->keterangan ?>" class="form-control form-rounded" readonly></td>
                                     </tr>
                                     <tr>
-                            <td><b>Time in (Estimasi)</b></td>
-                            <td>:</td>
-                            <td><input type="text" value="<?php echo $detail->time_in ?>" class="form-control form-rounded" readonly></td>
-                        </tr>
-                        <tr>
-                        <td><b>Time Out (Estimasi)</b></td>
-                        <td>:</td>
-                        <td colspan="3"><input type="text" value="<?php echo $detail->time_out ?>" class="form-control form-rounded" readonly></td>
-                        </tr>
-                        <tr>
-                            <td><b>Time in (Aktual)</b></td>
-                            <td>:</td>
-                            <td><input type="text" value="<?php echo $detail->time_in_aktual ?>" class="form-control form-rounded" readonly></td>
-                        </tr>
-                        <tr>
-                        <td><b>Time Out (Aktual)</b></td>
-                        <td>:</td>
-                        <td colspan="3"><input type="text" value="<?php echo $detail->time_out_aktual ?>" class="form-control form-rounded" readonly></td>
-                        </tr>
+                                        <td><b>Time in (Estimasi)</b></td>
+                                        <td>:</td>
+                                        <td><input type="text" value="<?php echo $detail->time_in ?>" class="form-control form-rounded" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Time Out (Estimasi)</b></td>
+                                        <td>:</td>
+                                        <td colspan="3"><input type="text" value="<?php echo $detail->time_out ?>" class="form-control form-rounded" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Time in (Aktual)</b></td>
+                                        <td>:</td>
+                                        <td><input type="text" value="<?php echo $detail->time_in_aktual ?>" class="form-control form-rounded" readonly></td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Time Out (Aktual)</b></td>
+                                        <td>:</td>
+                                        <td colspan="3"><input type="text" value="<?php echo $detail->time_out_aktual ?>" class="form-control form-rounded" readonly></td>
+                                    </tr>
                                     <tr>
                                         <td><b>Tanda Tangan</td>
                                         <td>:</td>

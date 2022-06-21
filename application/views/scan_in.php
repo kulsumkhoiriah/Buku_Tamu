@@ -34,6 +34,7 @@
                 <div class="col-md-12 col-md-offset-2">
                     <table class="table table-bordered table-striped" width="100%">
                         <form action="<?= site_url('scan/ubah') ?>" method="post" name="form1">
+
                             <tr>
                                 <td>ID</td>
                                 <td>
@@ -44,8 +45,9 @@
                                 <td>Time In</td>
                                 <td>
                                     <input type="teks" class="form-control" name="time_in_aktual" value="<?php
-                                                                                                    date_default_timezone_set('Asia/Jakarta'); // Zona Waktu indonesia
-                                                                                                    echo date('h:i:s a'); ?>" readonly>
+                                                                                                            date_default_timezone_set('Asia/Jakarta'); // Zona Waktu indonesia
+                                                                                                            echo date('h:i:s a'); ?>" readonly>
+
                                 </td>
                             </tr>
 

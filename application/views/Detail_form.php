@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
 </head>
 
-<body class=" bg-light">
+<body class="bg-light">
 
     <?php if (empty($keyword)) { ?>
         <div class="container-fluid ">
@@ -68,15 +68,15 @@
             <?php foreach ($data as $detail) { ?>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-8  bg-gradient-primary text-white offset-md-2 d-flex justify-content-center rounded-lg  ">
+                        <div class="col-md-8 offset-md-2 d-flex justify-content-center rounded-lg  ">
                             <div class="row">
                                 <div class="col">
-                                    <div class="card-body text-white">
-                                        <table class="table table-borderless text-white ">
+                                    <div class="card-body">
+                                        <table class="table table-borderless text-black ">
                                             <tr>
 
                                                 <td align="center" colspan="3">
-                                                    <h2><a class="text-white"><i><?php echo $detail->nama_visitor ?></i></a></h2>
+                                                    <h2><a class="text-black"><i><?php echo $detail->nama_visitor ?></i></a></h2>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -152,7 +152,7 @@
                                                                 $kode = "$detail->id";
                                                                 $folder = "././assets/code/";
                                                                 require_once('assets/qrcode/qrlib.php');
-                                                                QRcode::png("$kode","$folder" . $detail->id . ".png", "l", 4.4);
+                                                                QRcode::png("$kode", "$folder" . $detail->id . ".png", "l", 4.4);
                                                                 ?>">
                                                     <img src="<?= base_url() ?>assets/code/<?= $detail->id ?>.png" alt=""></img>
                                                 </td>

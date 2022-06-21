@@ -1,12 +1,11 @@
-
 <!-- Main content -->
 
 <div class="col d-flex justify-content-center">
-<div class="card shadow card-center mb-5" style="width: 70%;">
-    <div class="card-header py-2 bg-navy">
-        <h4 class="m-0 font-weight-bold text-white">Tambah User</h4>
-    </div>
-    <div class="card-body bg-gradient-primary">
+    <div class="card shadow card-center mb-5" style="width: 70%;">
+        <div class="card-header py-2 bg-navy">
+            <h4 class="m-0 font-weight-bold text-white">Tambah User</h4>
+        </div>
+        <div class="card-body text-primary">
             <div class="row">
                 <div class="col">
                     <form action="" method="post">
@@ -55,4 +54,4 @@
         </div>
 
     </div>
-</section>
+    </section>

@@ -31,38 +31,30 @@
             background-color: black;
             color: white;
         }
+
+        p {
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+        }
     </style>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <?php if ($this->session->userdata('level') == 1) { ?>
-    <?php
-    global $mysqli;
-    $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $database = "buku_tamu";
-    $mysqli = new mysqli($host, $user, $pass, $database);
-    if (mysqli_connect_errno()) {
-        trigger_error('Koneksi ke database gagal:' . mysqli_connect_error());
-    }
-    ?>
     <html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <body>
 
         <div class="box-header">
-            <hr>
+            <h1>
+                <p align="center">Perum Percetakan Uang Republik Indonesia <br>
+                    Laporan Pengunjung Data Center<br>
+                </p>
+            </h1>
 
-            <h5 class="box-title">&nbsp;&nbsp;&nbsp;<img class="img-fluid" alt="Responsive image" src="<?= base_url() ?>assets/img/peruri.png" width="70" height="50"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <b>Laporan Data Tamu</b>
-            </h5>
-
             <hr>
-            <hr>
-
         </div>
         <table class="table" cellspacing=0 cellpadding=0>
             <thead class="text-center">
@@ -97,7 +89,6 @@
                         <td><?php echo $dk->time_in; ?></td>
                         <td><?php echo $dk->time_out; ?></td>
                         <td><img src="<?php echo $dk->signed ?>" class="sign-priview" width="70" /></td>
-                        <td><img src="<?php echo $dk->foto ?>" width="100px" height="100px" /></td>
                         <td>
                             <?php echo $dk->status  == 0 ? '<button class="btn btn-warning btn-rounded" style="font-size:9px;">Menunggu Persetujuan</button>' : null ?>
                             <?php echo $dk->status  == 1 ? '<button class="btn btn-success btn-rounded" style="font-size:9px;">Setuju</button>' : null ?>
@@ -111,28 +102,16 @@
 
     </html>
 <?php } else if ($this->session->userdata('level') != 1) { ?>
-    <?php
-    global $mysqli;
-    $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $database = "buku_tamu";
-    $mysqli = new mysqli($host, $user, $pass, $database);
-    if (mysqli_connect_errno()) {
-        trigger_error('Koneksi ke database gagal:' . mysqli_connect_error());
-    }
-    ?>
     <html>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <body>
         <div class="box-header">
-            <hr>
-            <h4 class="box-title">&nbsp;&nbsp;&nbsp;<img class="img-fluid" alt="Responsive image" src="<?= base_url() ?>assets/img/peruri.png" width="100" height="70">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <b>Laporan Data Tamu</b>
-            </h4>
-            <hr>
+            <h1>
+                <p align="center">Perum Percetakan Uang Republik Indonesia <br>
+                    Laporan Pengunjung Data Center<br>
+                </p>
+            </h1>
             <hr>
         </div>
         <table class="table" cellspacing=0 cellpadding=0>
@@ -150,7 +129,6 @@
                     <th>Time In</th>
                     <th>Time Out</th>
                     <th>Tanda Tangan</th>
-                    <th>Foto</th>
                     <th>Status</th>
                 </tr>
             </thead>
@@ -170,7 +148,6 @@
                         <td><?php echo $dk->time_in; ?></td>
                         <td><?php echo $dk->time_out; ?></td>
                         <td><img src="<?php echo $dk->signed ?>" class="sign-priview" width="70" /></td>
-                        <td><img src="<?php echo $dk->foto ?>" width="100px" height="100px" /></td>
                         <td>
                             <?php echo $dk->status_kasek  == 0 ? '<button class="btn btn-warning btn-rounded" style="font-size:9px;">Menunggu Persetujuan</button>' : null ?>
                             <?php echo $dk->status_kasek  == 1 ? '<button class="btn btn-success btn-rounded" style="font-size:9px;">Setuju</button>' : null ?>

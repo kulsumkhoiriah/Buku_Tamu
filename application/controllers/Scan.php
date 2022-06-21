@@ -22,27 +22,50 @@ class Scan extends CI_Controller
             'id' => $id,
             'time_in_aktual' => $time_in_aktual,
         );
-        $where = array(
-            'id' => $id
-        );
-        $this->form_m->add_scan($data, $where, 'form_tamu');
+
+        $query = $this->db->query("SELECT * FROM form_tamu WHERE id = $id AND status = '1'");
+        if ($query->num_rows() == 1) {
+            $where = array(
+                'id' => $id
+            );
+
+            $this->form_m->add_scan($data, $where, 'form_tamu');
+
 ?>
-        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/sweetalert/sweetalert2.min.css">
-        <script src="<?= base_url() ?>assets/plugins/sweetalert/sweetalert2.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/sweetalert/sweetalert2.min.css">
+            <script src="<?= base_url() ?>assets/plugins/sweetalert/sweetalert2.min.js"></script>
 
-        <body></body>
-        <script>
-            Swal.fire({
-                icon: 'success',
-                title: 'Success',
-                text: 'Selamat Login anda berhasil!'
-            }).then((result) => {
-                window.location = '<?= site_url('scan') ?>';
-            })
-        </script>
+            <body></body>
+            <script>
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: 'Selamat Login anda berhasil!'
+                }).then((result) => {
+                    window.location = '<?= site_url('scan') ?>';
+                })
+            </script>
 
-    <?php
+        <?php
+        } else {
+        ?>
+            <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/sweetalert/sweetalert2.min.css">
+            <script src="<?= base_url() ?>assets/plugins/sweetalert/sweetalert2.min.js"></script>
 
+            <body></body>
+            <script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Gagal',
+                    text: 'Kunjungan Belum Di setujui!'
+                }).then((result) => {
+                    window.location = '<?= site_url('scan') ?>';
+
+                })
+            </script>
+
+        <?php
+        }
     }
     function ubah_out()
     {
@@ -55,24 +78,49 @@ class Scan extends CI_Controller
         $where = array(
             'id' => $id
         );
-        $this->form_m->add_scan($data, $where, 'form_tamu');
-    ?>
-        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/sweetalert/sweetalert2.min.css">
-        <script src="<?= base_url() ?>assets/plugins/sweetalert/sweetalert2.min.js"></script>
+        $query = $this->db->query("SELECT * FROM form_tamu WHERE id = $id AND status = '1'");
+        if ($query->num_rows() == 1) {
+            $where = array(
+                'id' => $id
+            );
 
-        <body></body>
-        <script>
-            Swal.fire({
-                icon: 'success',
-                title: 'Success',
-                text: 'Selamat Login anda berhasil!'
-            }).then((result) => {
-                window.location = '<?= site_url('scan') ?>';
-            })
-        </script>
+            $this->form_m->add_scan($data, $where, 'form_tamu');
+
+        ?>
+            <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/sweetalert/sweetalert2.min.css">
+            <script src="<?= base_url() ?>assets/plugins/sweetalert/sweetalert2.min.js"></script>
+
+            <body></body>
+            <script>
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Success',
+                    text: 'Selamat Login anda berhasil!'
+                }).then((result) => {
+                    window.location = '<?= site_url('scan/scan_out') ?>';
+                })
+            </script>
+
+        <?php
+        } else {
+        ?>
+            <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/sweetalert/sweetalert2.min.css">
+            <script src="<?= base_url() ?>assets/plugins/sweetalert/sweetalert2.min.js"></script>
+
+            <body></body>
+            <script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Gagal',
+                    text: 'Kunjungan Belum Di setujui!'
+                }).then((result) => {
+                    window.location = '<?= site_url('scan/scan_out') ?>';
+
+                })
+            </script>
 
 <?php
-
+        }
     }
     public function scan_out()
     {
