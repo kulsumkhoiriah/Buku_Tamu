@@ -18,55 +18,42 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
 </head>
 
-<body class="bg-light">
+<body style="background-image: url('<?= base_url() ?>assets/img/peruri.jpg');">
 
     <?php if (empty($keyword)) { ?>
-        <div class="container-fluid ">
-            <div class=" row mt-5 mr-8">
-                <div class="col-md-8  bg-gradient-primary text-white offset-md-2 rounded-lg  ">
-                    <center>
-                        <h3 class="mt-3" style="font-family: 'EB Garamond', serif;"> Detail Form Kunjungan </h3>
-                        <h5 style="font-family: 'EB Garamond', serif;">Data Center Peruri</h5>
-                    </center>
-                    <br>
-                    <hr color="white">
-
-                    <div class="row">
-                        <div class="col">
-                            <div class="card-body text-white ">
-                                <form action="<?= base_url('form_tamu/search') ?>" method="get">
-                                    <div>
-                                        <table class="table table-borderless text-white">
-                                            <h5><b>Silahkan Masukan Nama dan Tanggal ..... !!!</b></h5>
-                                            </p>
-                                            <tr>
-                                                <td>Masukan Nama</td>
-                                                <td>:</td>
-                                                <td> <input type="text" class="form_rounded" name="keyword" placeholder="Masukan Kata Nama..." required></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Tanggal</td>
-                                                <td>:</td>
-                                                <td><input type="date" class="form_rounded" name="keyword2" required></td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td></td>
-                                                <td align="right"><button class="btn btn-outline-danger" type="submit"><i class="fa fa-search"> Cari</i></button></td>
-                                            </tr>
-                                            </center>
-                                        </table>
-
-                                </form>
-                            </div>
+        <div class="detail  mt-5 mb-5">
+            <br>
+            <center>
+            <h4 class="company"><b>Detail Kunjungan </b></h4> 
+            <h6 class="msg"><b>Data Center Peruri</b></h6>
+            </center>
+            <br>
+            <hr>
+            
+                 <div class="container">
+                    
+                    <form action="<?= base_url('form_tamu/search') ?>" method="get">
+                    <div class="form-group row">
+                        <div class="col-sm-1"></div>
+                        <label class="col-sm-3 col-form-label">Masukan Nama</label>
+                        <div class="col-sm-7">
+                        <input type="text" class="form_rounded" name="keyword" placeholder="Masukan Kata Nama..." required>
                         </div>
                     </div>
-
-                </div>
+                    <div class="form-group row">
+                        <div class="col-sm-1"></div>
+                        <label class="col-sm-3 col-form-label">Tanggal</label>
+                        <div class="col-sm-7">
+                        <input type="date" class="form_rounded" name="keyword2" required>
+                        </div>
+                    </div>
+                    <p align="right">
+                    <button class="btn btn-outline-danger" type="submit"><i class="fa fa-search"> Cari</i></button></p>
+                    </div>
             </div>
         <?php } else if (!empty($keyword)) { ?>
             <?php foreach ($data as $detail) { ?>
-                <div class="container-fluid">
+                <div class="login  mt-lg-5 mb-lg-5">
                     <div class="row">
                         <div class="col-md-8 offset-md-2 d-flex justify-content-center rounded-lg  ">
                             <div class="row">
@@ -169,17 +156,17 @@
                                                 <td>
                                                     <?php
                                                     if ($detail->status_kasek  == 1 && $detail->status  == 0) {
-                                                        echo '<mark style="background-color:Orange;">Menunggu Persetujuan Kadep</mark>';
+                                                        echo '<button style="background-color:Orange;">Menunggu Persetujuan Kadep</button>';
                                                     } else if ($detail->status_kasek  == 2) {
-                                                        echo '<mark style="background-color:red"> Tidak Disetujui</mark>   Note : ';
+                                                        echo '<button style="background-color:red"> Tidak Disetujui</button>   Note : ';
                                                         echo $detail->alasan;
                                                     } elseif ($detail->status_kasek  == 1 && $detail->status  == 1) {
-                                                        echo '<mark style="background-color:green;">Setuju</mark>';
+                                                        echo '<button style="background-color:green;">Setuju</button>';
                                                     } elseif ($detail->status_kasek  == 1 && $detail->status  == 2) {
-                                                        echo '<mark style="background-color:red;">Tidak Disetujui</mark>   Note : ';
+                                                        echo '<button style="background-color:red;">Tidak Disetujui</button>   Note : ';
                                                         echo $detail->alasan;
                                                     } else {
-                                                        echo '<mark style="background-color:yellow;">Menunggu Persetujuan Kasek</mark>';
+                                                        echo '<button style="background-color:yellow;">Menunggu Persetujuan Kasek</button>';
                                                     }
                                                     ?>
                                             </tr>

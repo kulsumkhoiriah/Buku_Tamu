@@ -8,10 +8,11 @@
                 <h4 class="m-0 font-weight-bold text-white">Detail Tamu</h4>
             </center>
         </div>
+        <div class="container">
         <div class="card-group">
             <div class="card text-dark ">
                 <div class="card-body ml-5">
-                    <table class="table table-borderless ">
+                    <table class="table table-borderless align-content-lg-center">
                         <tr>
 
                             <td align="center">
@@ -51,7 +52,7 @@
                         </tr>
                     </table>
                 </div>
-            </div>
+            </div></div>
             <div class="card">
                 <div class="card-body text-dark ">
                     <table class="table table-borderless text-black-50">

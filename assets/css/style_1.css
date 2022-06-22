@@ -1,3 +1,8 @@
+body {
+    font-family: Assistant, sans-serif;
+    display: flex;
+    min-height: 90vh;
+  }
 .panel-form {
     margin-top: 100px;
     padding: 20px;
@@ -5,30 +10,20 @@
 }
 
 .kbw-signature {
-    width: 250px;
+    width: 150px;
     height: 120px;
 }
 
 #sig canvas {
-    width: 90% !important;
+    width: 70% !important;
     height: auto;
 }
 
-.img {
-    background-repeat: no-repeat, repeat;
-    background-color: #cccccc;
-    height: max-content;
-}
 
 #preview {
     padding: 30px;
     border: 0px solid;
     background: #ffffff;
-}
-
-.text-black {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: black;
 }
 
 .form_rounded {
@@ -48,22 +43,6 @@
 }
 
 .round {
-    display: block;
-    width: 40%;
-    height: calc(1.5em + .75rem + 2px);
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #6e707e;
-    border-radius: 1rem;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #01030f;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
-}
-
-textarea {
     display: block;
     width: 100%;
     height: calc(4rem + .75rem + 2px);
@@ -88,8 +67,76 @@ textarea {
     width: 200px;
 }
 
-.bg-gradient-primary {
-    background-color: #4e73df;
-    background-image: linear-gradient(180deg, #05184e 10%, #88b1db 100%);
-    background-size: cover
-}
+
+
+  .login {
+    color: rgb(5, 4, 4);
+    font-family:cursive;
+   background: #136a8a;
+    background: 
+      -webkit-linear-gradient(to right, #faf9f9, #c2d6df);
+    background: 
+      linear-gradient(to right, #faf9f9, #c2d6df);
+   margin-top: 5em;
+   margin-bottom: 5em;
+   margin-left: auto;
+   margin-right: auto;
+    box-shadow: 
+      0px 2px 10px rgba(0,0,0,0.2), 
+      0px 10px 20px rgba(0,0,0,0.3), 
+      0px 30px 60px 1px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    padding: 30px;
+    width: 90%;
+  }
+  .detail {
+    color: rgb(5, 4, 4);
+    font-family:cursive;
+   background: #136a8a;
+    background: 
+      -webkit-linear-gradient(to right, #faf9f9, #c2d6df);
+    background: 
+      linear-gradient(to right, #faf9f9, #c2d6df);
+   margin-top: 5em;
+   margin-bottom: 5em;
+   margin-left: auto;
+   margin-right: auto;
+    box-shadow: 
+      0px 2px 10px rgba(0,0,0,0.2), 
+      0px 10px 20px rgba(0,0,0,0.3), 
+      0px 30px 60px 1px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    padding: 30px;
+    width: 80%;
+  }
+  .login .head {
+    align-items: center;
+    justify-content: center;
+  }
+  .login .company {
+    text-align: center;
+  }
+  .login .msg {
+    text-align: center;
+  }
+  
+
+  .kbw-signature {
+    width: 200px;;
+    height: 120px;
+  }
+  
+  #sig canvas {
+    width: 100% !important;
+    height: auto;
+  }
+  
+  .img {
+    background-repeat: no-repeat, repeat;
+    background-color: #cccccc;
+    height: max-content;
+  }
+  .hr{
+    border: 10px solid rgb(2, 8, 2);
+    border-radius: 5px;
+  }
