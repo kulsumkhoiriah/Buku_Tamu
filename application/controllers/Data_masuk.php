@@ -130,7 +130,38 @@ class Data_masuk extends CI_Controller
         $html = $this->load->view('Data_tamu/cetak_pdf', $data, true);
         $this->pdfgenerator->generate($html, $file_pdf, $paper, $orientation);
     }
+    public function alasan_kasek(){
+        $id = $this->input->post('id');
+        $alasan = $this->input->post('alasan');
+        $status_kasek = $this->input->post('status_kasek');
+        $data = array(
+            'id' => $id,
+            'alasan' => $alasan,
+            'status_kasek' => $status_kasek,
+        );
+        $where = array(
+            'id' => $id
+        );
+        $this->form_m->add_scan($data, $where, 'form_tamu');
+?>
+        <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/plugins/sweetalert/sweetalert2.min.css">
+        <script src="<?= base_url() ?>assets/plugins/sweetalert/sweetalert2.min.js"></script>
 
+        <body></body>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: 'Data Berhasil Tersimpan!'
+            }).then((result) => {
+                window.location = '<?= site_url('Data_masuk/data_persetujuan') ?>';
+            })
+        </script>
+
+<?php
+
+    }
+    
     public function print()
     {
         // panggil library yang kita buat sebelumnya yang bernama pdfgenerator
@@ -157,12 +188,10 @@ class Data_masuk extends CI_Controller
         $id = $this->input->post('id');
         $alasan = $this->input->post('alasan');
         $status = $this->input->post('status');
-        $status_kasek = $this->input->post('status_kasek');
         $data = array(
             'id' => $id,
             'alasan' => $alasan,
             'status' => $status,
-            'status_kasek' => $status_kasek,
         );
         $where = array(
             'id' => $id
@@ -187,3 +216,4 @@ class Data_masuk extends CI_Controller
 
     }
 }
+

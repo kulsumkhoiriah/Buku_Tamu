@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buku Tamu</title>
     <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/css/style_1.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="<?= base_url() ?>assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css" rel="stylesheet">
@@ -23,17 +22,13 @@
 </head>
 
 <body  style="background-image: url('<?= base_url() ?>assets/img/peruri.jpg');">
-<section class='login mt-lg-5 mb-lg-5'>
+<section class='login mt-5 mb-5'>
 
 
                 <?php echo form_open_multipart('form_tamu/savedata') ?>
             
                    <h3 class="company"><b>Form Kunjungan </b></h3> 
-                       
-          
-                    
-
- <h5 class="msg">Data Center Peruri</h5>
+<h5 class="msg">Data Center Peruri</h5>
  <br><hr><br>
 
  

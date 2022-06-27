@@ -34,7 +34,7 @@
 
         p {
             text-align: center;
-            font-size: 30px;
+            font-size: 20px;
             font-family: 'Times New Roman', Times, serif;
         }
     </style>
@@ -48,12 +48,10 @@
     <body>
 
         <div class="box-header">
-            <h1>
+            
                 <p align="center">Perum Percetakan Uang Republik Indonesia <br>
                     Laporan Pengunjung Data Center<br>
                 </p>
-            </h1>
-
             <hr>
         </div>
         <table class="table" cellspacing=0 cellpadding=0>
@@ -107,11 +105,9 @@
 
     <body>
         <div class="box-header">
-            <h1>
                 <p align="center">Perum Percetakan Uang Republik Indonesia <br>
                     Laporan Pengunjung Data Center<br>
                 </p>
-            </h1>
             <hr>
         </div>
         <table class="table" cellspacing=0 cellpadding=0>
