@@ -1,5 +1,13 @@
 <!-- Main content -->
 
+<section class="content-header">
+  
+    <ol class="bg-white breadcrumb rounded-pill">
+        <li><a href="#" class="radius"><i class="fa fa-user text-black-50"></i> Edit Profile</a></li>
+       
+        </li>
+</ol>
+       
 <div class="col d-flex justify-content-center">
     <div class="card shadow card-center mb-5 " style="width: 70%;">
         <div class="card-header py-3 bg-navy">

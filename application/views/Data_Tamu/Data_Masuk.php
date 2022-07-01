@@ -1,14 +1,38 @@
 <?php if ($this->session->userdata('level') == 1) { ?>
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-primary">Pengunjung Data Center Peruri</h1>
+    <section class="content-header">
+        <div>
+    <ol class="bg-white breadcrumb rounded-pill">
+        <li><a href="#" class="radius"><i class="fa fa-book text-black-50"></i> Data Masuk</a></li>
+       
+        </li>
+</ol>
+        
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4 radius">\
+    <div class="card-header py-3 bg-white text-black-50">
+        <div class="d-sm-flex justify-content-between mb-4">
+        <h3>Pengunjung Data Center Peruri</h3>
         <a class="d-none d-sm-inline-block btn btn-outline-primary shadow-sm" data-toggle="modal" data-target="#cetakpdf">
             <i class="fa fa-print"></i> Cetak PDF
         </a>
     </div>
-
-    <!-- DataTales Example -->
-    <div class="card shadow mb-4">
-        <div class="card-body bg-gradient-primary rounded">
+    </div>
+        <div class="card-body bg-white text-black-50 rounded">
+        <div class="col-md-12">
+			<div class="row">
+				<div class="col-md-2">
+					<div class="form-group">
+						<label>Pilih Status</label>
+						<select class="form-control jenis_kelamin" name="status">
+							<option>-- Pilih --</option>
+							<option value="Menunggu Persetujuan Kadep">Menunggu Persetujuan Kadep</option>
+							<option value="Tidak Setuju">Tidak Setuju</option>
+                            <option value="Setuju">Setuju</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
             <div class="table-responsive">
                 <?php $this->view('massage') ?>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -35,7 +59,7 @@
                                 <td><?php echo $dm->pendamping; ?></td>
                                 <td><?php echo $dm->tujuan; ?></td>
                                 <td>
-                                    <?php echo $dm->status  == 0 ? '<button class="btn btn-warning btn-rounded" style="font-size:12px;">Menunggu Persetujuan</button>' : null ?>
+                                    <?php echo $dm->status  == 0 ? '<button class="btn btn-warning btn-rounded" style="font-size:12px;">Menunggu Persetujuan Kadep</button>' : null ?>
                                     <?php echo $dm->status  == 1 ? '<button class="btn btn-success btn-rounded" style="font-size:12px;">Setuju</button>' : null ?>
                                     <?php echo $dm->status  == 2 ? '<button class="btn btn-danger btn-rounded" style="font-size:12px;">Tidak Setuju</button>' : null ?></td>
                                 <td class="text-center" width=100>
@@ -71,15 +95,25 @@
     </div>
 <?php } else if ($this->session->userdata('level') != 1) { ?>
     <!-- Main content -->
-    <div class="d-sm-flex justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-primary">Pengunjung Data Center Peruri</h1>
+    <section class="content-header">
+        <div>
+    <ol class="bg-white breadcrumb rounded-pill">
+        <li><a href="#" class="radius"><i class="fa fa-book text-black-50"></i>  Data Masuk </a></li>
+       
+        </li>
+</ol>
+        
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4 radius">
+    <div class="card-header py-3 bg-white text-black-50">
+        <div class="d-sm-flex justify-content-between mb-4">
+        <h3>Pengunjung Data Center Peruri</h3>
         <a class="d-none d-sm-inline-block btn btn-outline-primary shadow-sm" data-toggle="modal" data-target="#cetakpdf">
             <i class="fa fa-print"></i> Cetak PDF
         </a>
     </div>
-    <!-- DataTales Example -->
-    <div class="card shadow mb-4">
-        <div class="card-body bg-gradient-primary rounded">
+    </div>
+        <div class="card-body bg-white  text-black-50 rounded">
             <div class="table-responsive">
                 <?php $this->view('massage') ?>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -106,8 +140,8 @@
                                 <td><?php echo $dk->pendamping; ?></td>
                                 <td><?php echo $dk->tujuan; ?></td>
                                 <td>
-                                    <?php echo $dk->status_kasek  == 0 ? '<button class="btn btn-warning btn-rounded" style="font-size:12px;">Menunggu Persetujuan</button>' : null ?>
-                                    <?php echo $dk->status_kasek  == 1 ? '<button class="btn btn-success btn-rounded" style="font-size:12px;">Setuju</button>' : null ?>
+                                    <?php echo $dk->status_kasek  == 0 ? '<button class="btn btn-warning btn-rounded" style="font-size:12px;">Menunggu Persetujuan Kasek</button>' : null ?>
+                                    <?php echo $dk->status_kasek  == 1 ? '<button class="btn btn-success btn-rounded" style="font-size:12px;">Menunggu Persetujuan Kadep</button>' : null ?>
                                     <?php echo $dk->status_kasek  == 2 ? '<button class="btn btn-danger btn-rounded" style="font-size:12px;">Tidak Setuju</button>' : null ?></td>
                                 <td class="text-center" width=100>
                                     <a href="<?= site_url('Data_masuk/detail/' . $dk->id) ?>" class="btn btn-primary btn-xs">
@@ -197,4 +231,17 @@
         </div>
     </div>
 
-</div
+                        </div>
+                        <script type="text/javascript">
+	$(document).ready(function() {
+	    $('#tabelData').DataTable();
+	    function filterData () {
+		    $('#tabelData').DataTable().search(
+		        $('.status').val()
+		    	).draw();
+		}
+		$('.status').on('change', function () {
+	        filterData();
+	    });
+	});
+</script>

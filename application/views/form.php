@@ -41,49 +41,49 @@
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Tanggal</label>
                         <div class="col-sm-7">
-                            <input type="date" class="form_rounded" placeholder="Date" name="tanggal">
+                            <input type="date" class="form_rounded" placeholder="Date" name="tanggal" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Nama Visitor</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form_rounded" placeholder="Masukan Nama Visitor" name="nama_visitor">
+                            <input type="text" class="form_rounded" placeholder="Masukan Nama Visitor" name="nama_visitor" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Nomor Telepon</label>
                         <div class="col-sm-7">
-                        <input input type="text" id="cc" class="form_rounded"  name="nomor_telepon" placeholder="Masukan Nomor Telepon">
+                        <input input type="text" id="cc" class="form_rounded"  name="nomor_telepon" placeholder="Masukan Nomor Telepon" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Email</label>
                         <div class="col-sm-7">
-                            <input type="email" class="form_rounded" placeholder="Masukan Email" name="email">
+                            <input type="email" class="form_rounded" placeholder="Masukan Email" name="email" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Perusahaan / Unit Kerja</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form_rounded" placeholder="Masukan Perusahaan / Unit Kerja" name="unit_kerja">
+                            <input type="text" class="form_rounded" placeholder="Masukan Perusahaan / Unit Kerja" name="unit_kerja" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Pendamping</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form_rounded" placeholder="Masukan Nama Pendamping" name="pendamping">
+                            <input type="text" class="form_rounded" placeholder="Masukan Nama Pendamping" name="pendamping" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Tujuan Kunjungan</label>
                         <div class="col-sm-7">
-                            <textarea name="tujuan" class="round"></textarea>
+                            <textarea name="tujuan" class="round" required></textarea>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -95,16 +95,16 @@
                     </div>
                     <div class=" form-group row">
                         <div class="col-sm-1"></div>
-                        <label class="col-sm-3 col-form-label">Time in</label>
+                        <label class="col-sm-3 col-form-label">Time in (Estimasi)</label>
                         <div class="col-sm-3">
-                            <input type="time" class="form_rounded" name="time_in">
+                            <input type="time" class="form_rounded" name="time_in" required>
                         </div>
                     </div>
                     <div class=" form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Time out (Estimasi)</label>
                         <div class="col-sm-3">
-                            <input type="time" class="form_rounded" name="time_out">
+                            <input type="time" class="form_rounded" name="time_out" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -112,14 +112,14 @@
                         <label class="col-sm-3 col-form-label">Tanda Tangan</label>
                         <div class="col-sm-7">
                             <div id="sig"></div><br><button id="clear" class="btn btn-outline-danger">Clear</button>
-                            <textarea id="signature64" name="signed" style="display: none;"> </textarea>
+                            <textarea id="signature64" name="signed" style="display: none;" required> </textarea>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-1"></div>
                         <label class="col-sm-3 col-form-label">Kartu Tanda Pengenal</label>
                         <div class="col-sm-7">
-                            <input type="file" class="form_rounded" name="nik">
+                            <input type="file" class="form_rounded" name="nik" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -146,7 +146,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title">Ambil Gambar </h4>
+                <h4 class="modal-title">Hasil Foto </h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
 
             </div>

@@ -1,11 +1,17 @@
 <?php if ($this->session->userdata('level') == 1) { ?>
-    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-    </div>
+    <section class="content-header">
+    <ol class="bg-white breadcrumb rounded-pill">
+        <li><a href="#" class="radius"><i class="fa fa-dashboard text-black-50"></i> Dashboard</a></li>
+       
+        </li>
+</ol>
+
+        <br>
+        
     <div class="row">
         <!-- Earnings (Monthly) Card Example -->
-        <div class="col-xl-3 col-md-4 mb-4">
-            <div class="card border-left-primary shadow h-90 py-3 bg-primer">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-90 py-3 bg-primer radius">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-3">
@@ -21,7 +27,7 @@
             </div>
         </div>
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-warning shadow h-90 py-3 bg-kuning">
+            <div class="card border-left-warning shadow h-90 py-3 bg-kuning radius">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
@@ -37,7 +43,7 @@
             </div>
         </div>
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-success shadow h-90 py-3 bg-hijau">
+            <div class="card border-left-success shadow h-90 py-3 bg-hijau radius">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
@@ -53,7 +59,7 @@
             </div>
         </div>
         <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-danger shadow h-90 py-3 bg-merah">
+            <div class="card border-left-danger shadow h-90 py-3 bg-merah radius">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
@@ -173,15 +179,18 @@
                     </script>
                 </div>
             </div>
-        </div>
+        </div></div>
     <?php } else if ($this->session->userdata('level') == 2) { ?>
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-        </div>
+        <section class="content-header">
+    <ol class="bg-white breadcrumb rounded-pill">
+        <li><a href="#" class="radius"><i class="fa fa-dashboard text-black-50"></i> Dashoard</a></li>
+       
+        </li>
+</ol>
         <div class="row">
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-primary shadow h-90 bg-primer py-3">
+                <div class="card border-left-primary shadow h-90 bg-primer py-3 radius">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-3">
@@ -197,13 +206,13 @@
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-warning shadow h-90 py-3 bg-kuning">
+                <div class="card border-left-warning shadow h-90 py-3 bg-kuning radius">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="text-s font-weight-bold text-warning  mb-1">
+                                <div class="text-s font-weight-bold text-secondary  mb-1">
                                     Perlu Peretujuan </div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_persetujuan_kasek() ?></div>
+                                <div class="h5 mb-0 font-weight-bold text-secondary"><?= $this->fungsi->count_persetujuan_kasek() ?></div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -213,13 +222,13 @@
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-success shadow h-90 py-3 bg-hijau">
+                <div class="card border-left-success shadow h-90 py-3 bg-hijau radius">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-4">
-                                <div class="text-l font-weight-bold text-success mb-1">
+                                <div class="text-l font-weight-bold text-secondary mb-1">
                                     Visitor Diizinkan</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_diizinkan_kasek() ?></div>
+                                <div class="h5 mb-0 font-weight-bold text-secondary"><?= $this->fungsi->count_diizinkan_kasek() ?></div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-smile fa-2x text-gray-300"></i>
@@ -229,13 +238,13 @@
                 </div>
             </div>
             <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-danger shadow h-100 py-2 bg-merah">
+                <div class="card border-left-danger shadow h-100 py-2 bg-merah radius">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-4">
                                 <div class="text-s font-weight-bold text-danger  mb-1">
                                     Visitor Ditolak</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_ditolak_kasek() ?></div>
+                                <div class="h5 mb-0 font-weight-bold text-secondary"><?= $this->fungsi->count_ditolak_kasek() ?></div>
                             </div>
                             <div class="col-auto">
                                 <i class="fas fa-frown fa-2x text-gray-300"></i>
@@ -352,19 +361,22 @@
 
 
                 <?php } else if ($this->session->userdata('level') == 3) { ?>
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                    </div>
+                    <section class="content-header">
+    <ol class="bg-white breadcrumb rounded-pill">
+        <li><a href="#" class="radius"><i class="fa fa-dashboard text-black-50"></i> Dashboard</a></li>
+       
+        </li>
+</ol>
                     <div class="row">
                         <!-- Earnings (Monthly) Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-90 py-2">
+                            <div class="card border-left-primary shadow h-90 py-2 radius bg-primer">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-s font-weight-bold text-primary  mb-1">
+                                            <div class="text-s font-weight-bold text-secondary  mb-1">
                                                 Perlu Peretujuan Kasek</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_persetujuan_kasek() ?></div>
+                                            <div class="h5 mb-0 font-weight-bold text-secondary"><?= $this->fungsi->count_persetujuan_kasek() ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -374,13 +386,13 @@
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-90 py-2">
+                            <div class="card border-left-warning shadow h-90 py-2 radius bg-kuning">
                                 <div class="card-body ">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-s font-weight-bold text-primary  mb-1">
+                                            <div class="text-s font-weight-bold text-secondary  mb-1">
                                                 Perlu Persetujuan Kadep</div>
-                                            <div class="h5 mb-0 font-weight-bold text-warning"><?= $this->fungsi->count_persetujuan() ?></div>
+                                            <div class="h5 mb-0 font-weight-bold text-secondary"><?= $this->fungsi->count_persetujuan() ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -390,13 +402,13 @@
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card border-left-success shadow h-100 py-2 radius bg-hijau">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-4">
-                                            <div class="text-s font-weight-bold text-success  mb-1">
+                                            <div class="text-s font-weight-bold text-secondary  mb-1">
                                                 Visitor di izinkan</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_diizinkan() ?></div>
+                                            <div class="h5 mb-0 font-weight-bold text-secondary"><?= $this->fungsi->count_diizinkan() ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-smile fa-2x text-gray-300"></i>
@@ -406,13 +418,13 @@
                             </div>
                         </div>
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-danger shadow h-100 py-2">
+                            <div class="card border-left-danger shadow h-100 py-2 radius bg-merah">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-4">
-                                            <div class="text-s font-weight-bold text-danger  mb-1">
+                                            <div class="text-s font-weight-bold text-secondary  mb-1">
                                                 Visitor Ditolak</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $this->fungsi->count_ditolak() ?></div>
+                                            <div class="h5 mb-0 font-weight-bold text-secondary"><?= $this->fungsi->count_ditolak() ?></div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-frown fa-2x text-gray-300"></i>

@@ -12,13 +12,12 @@
             </a>
         </div>
     </div>
-    <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i></a></li>
-        <li class="active  text-gray-800">
-            <center>Scan Time In</center>
+    
+    <ol class="bg-white breadcrumb rounded-pill">
+        <li><a href="#" class="radius"><i class="fa fa-camera text-black-50"></i> Scan QR Code Time In</a></li>
+       
         </li>
-        </li>
-    </ol>
+</ol>
 </section>
 
 
