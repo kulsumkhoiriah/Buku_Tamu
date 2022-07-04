@@ -57,7 +57,6 @@ class Data_masuk extends CI_Controller
         $this->data_masuk_m->del($id);
         if ($this->db->affected_rows() > 0) {
             $this->session->set_flashdata('success', 'Data Berhasil di hapus');
-            helper_log("delete", "berhasil menghapus");
             redirect('Data_masuk');
         }
     }

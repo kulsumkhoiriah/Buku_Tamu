@@ -1,5 +1,5 @@
 body {
-    font-family: Assistant, sans-serif;
+  font-family: 'Roboto', sans-serif;
     display: flex;
     min-height: 90vh;
   }
@@ -71,7 +71,7 @@ body {
 
   .login {
     color: rgb(5, 4, 4);
-    font-family:cursive;
+    font-family: 'Roboto', sans-serif;
    background: #136a8a;
     background: 
       -webkit-linear-gradient(to right, #faf9f9, #c2d6df);
@@ -91,7 +91,7 @@ body {
   }
   .detail {
     color: rgb(5, 4, 4);
-    font-family:cursive;
+    font-family: 'Roboto', sans-serif;
    background: #136a8a;
     background: 
       -webkit-linear-gradient(to right, #faf9f9, #c2d6df);

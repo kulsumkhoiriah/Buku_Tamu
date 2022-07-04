@@ -18,21 +18,6 @@
     </div>
     </div>
         <div class="card-body bg-white text-black-50 rounded">
-        <div class="col-md-12">
-			<div class="row">
-				<div class="col-md-2">
-					<div class="form-group">
-						<label>Pilih Status</label>
-						<select class="form-control jenis_kelamin" name="status">
-							<option>-- Pilih --</option>
-							<option value="Menunggu Persetujuan Kadep">Menunggu Persetujuan Kadep</option>
-							<option value="Tidak Setuju">Tidak Setuju</option>
-                            <option value="Setuju">Setuju</option>
-						</select>
-					</div>
-				</div>
-			</div>
-		</div>
             <div class="table-responsive">
                 <?php $this->view('massage') ?>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -232,16 +217,3 @@
     </div>
 
                         </div>
-                        <script type="text/javascript">
-	$(document).ready(function() {
-	    $('#tabelData').DataTable();
-	    function filterData () {
-		    $('#tabelData').DataTable().search(
-		        $('.status').val()
-		    	).draw();
-		}
-		$('.status').on('change', function () {
-	        filterData();
-	    });
-	});
-</script>

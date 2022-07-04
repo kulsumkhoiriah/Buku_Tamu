@@ -40,7 +40,6 @@ class Data_masuk_m extends CI_Model
     }
     public function tampil_tgl1($tgl1, $tgl2)
     {
-        $level = $this->fungsi->user_login()->level;
         $query = $this->db->query("SELECT * FROM form_tamu WHERE status_kasek='1' AND tanggal BETWEEN '$tgl1' AND '$tgl2'", "SELECT * FROM form_tamu WHERE status_kasek='$1'");
         return $query->result();
     }

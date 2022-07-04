@@ -1,15 +1,14 @@
 <?php if ($this->session->userdata('level') == 1) { ?>
     <section class="content-header">
     <ol class="bg-white breadcrumb rounded-pill">
-        <li><a href="#" class="radius"><i class="fa fa-dashboard text-black-50"></i> Dashboard</a></li>
-       
+        <li><a href="#" class="radius"><i class="fa fa-dashboard text-black-50"></i> Dashboard</a></li> 
         </li>
 </ol>
 
         <br>
         
     <div class="row">
-        <!-- Earnings (Monthly) Card Example -->
+        <!-- count data masuk -->
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-primary shadow h-90 py-3 bg-primer radius">
                 <div class="card-body">
@@ -33,7 +32,7 @@
                         <div class="col mr-2">
                             <div class="text-l font-weight-bold text-secondary mb-1">
                                 Perlu Persetujuan</div>
-                            <div class="h5 mb-0 font-weight-bold text-warning"><?= $this->fungsi->count_persetujuan() ?></div>
+                            <div class="h5 mb-0 font-weight-bold text-secondary"><?= $this->fungsi->count_persetujuan() ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -49,7 +48,7 @@
                         <div class="col mr-2">
                             <div class="text-l font-weight-bold text-secondary mb-1">
                                 Visitor Diizinkan</div>
-                            <div class="h5 mb-0 font-weight-bold text-success"><?= $this->fungsi->count_diizinkan() ?></div>
+                            <div class="h5 mb-0 font-weight-bold text-secondary"><?= $this->fungsi->count_diizinkan() ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-smile fa-2x text-gray-300"></i>
@@ -65,7 +64,7 @@
                         <div class="col mr-2">
                             <div class="text-s font-weight-bold  text-secondary mb-1">
                                 Visitor Ditolak</div>
-                            <div class="h5 mb-0 font-weight-bold text-danger"><?= $this->fungsi->count_ditolak() ?></div>
+                            <div class="h5 mb-0 font-weight-bold text-secondary"><?= $this->fungsi->count_ditolak() ?></div>
                         </div>
                         <div class="col-auto">
                             <i class="fas fa-frown fa-2x text-gray-300"></i>
@@ -242,7 +241,7 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-4">
-                                <div class="text-s font-weight-bold text-danger  mb-1">
+                                <div class="text-s font-weight-bold text-secondary mb-1">
                                     Visitor Ditolak</div>
                                 <div class="h5 mb-0 font-weight-bold text-secondary"><?= $this->fungsi->count_ditolak_kasek() ?></div>
                             </div>

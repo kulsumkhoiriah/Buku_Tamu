@@ -35,7 +35,7 @@
                             <?= form_error('passconf') ?>
                         </div>
                         <div class="form-group <?= form_error('departemen') ? 'has-error' : null ?>">
-                            <label>departemen </label>
+                            <label>Departemen </label>
                             <input type="text" name="departemen" value=" <?= set_value('departemen') ?>" style="text-transform: uppercase;" class=" form-control" required>
                         </div>
                         <div class="form-group <?= form_error('level') ? 'has-error' : null ?>">
@@ -45,6 +45,7 @@
 
                                 <option value="1" <?= set_value('level') == 1 ? "selected" : null ?>>Kepala Divisi</option>
                                 <option value="2" <?= set_value('level') == 2 ? "selected" : null ?>>Kepala Seksi</option>
+                                <option value="3" <?= set_value('level') == 3 ? "selected" : null ?>>Admin</option>
                             </select><?= form_error('level') ?>
                         </div>
                         <div class="form-group">

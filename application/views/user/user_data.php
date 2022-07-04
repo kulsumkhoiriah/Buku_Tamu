@@ -23,7 +23,7 @@
                         <th>#</th>
                         <th>Username</th>
                         <th>Name</th>
-                        <th>departemen</th>
+                        <th>Departemen</th>
                         <th>Level</th>
                         <th>Actions</th>
                     </tr>
